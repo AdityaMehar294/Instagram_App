@@ -13,4 +13,136 @@
  *= require_tree .
  *= require_self
  */
- @import 'custom.css';
+ /* Base styles */
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body nav.navbar {
+    background-color: #03e3f3;
+    color: #262626;
+}
+i{
+    font-size: 1.5em;
+}
+.container {
+flex: 1;
+}
+form{
+    min-width:300px;
+    max-width:800px;
+    padding:20px;
+    margin:0 auto;
+    background:#ffffff59; 
+    -webkit-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    -moz-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+}
+#my_form{
+    min-width: 300px;
+    max-width: 400px; /* This will be overridden in media queries for smaller screens */
+    padding: 20px;
+    margin: 0 auto;
+    background: #ffffff59;
+    box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+}
+
+#form input, form input {
+    border: 1px solid #eee;
+    border-radius: 0 !important;
+    padding: 5px 8px;
+    color: #444;
+}
+
+.preview {
+    width: 152px;
+    height: 152px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    color: #555;
+    background: #ffffffad;
+    border: 1px solid #fff !important;
+    margin-top: 20px;
+    border-radius: 0px Important;
+}
+
+.card {
+    background-color: #fff;
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.card .postImage {
+    width: 100%;
+    height: auto; 
+}
+
+.card .username {
+    padding: 16px;
+    font-weight: 600;
+    color: #262626;
+    display: flex;
+    align-items: center;
+}
+
+.card .username p {
+    padding-left: 12px;
+}
+
+.card .username img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.card .status {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 12px;
+}
+
+.card .status b, .card .status .like img {
+    color: #262626;
+    padding: 8px;
+    font-size: 2rem;
+    width: 24px;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    color: #0e0d0d;
+}
+
+footer a {
+    color: #070707;
+}
+
+@media (max-width: 768px) {
+    #my_form, form {
+        max-width: 100%; 
+        padding: 15px; 
+    }
+
+    .card, .card .status, .card .username, .preview {
+        padding: 10px;
+    }
+
+    .card .status b, .card .status .like img {
+        font-size: 1rem; 
+    }
+}
+
