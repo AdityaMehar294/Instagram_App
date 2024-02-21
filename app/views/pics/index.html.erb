@@ -1,0 +1,12 @@
+<br>
+<% @pics.each do |pic| %>
+<div class="card mb-4 mx-auto pb-4">
+  <div class="username">
+    <i class="fa-brands fa-instagram" style="color: #d93041;font-size:2.5rem;"></i>
+    <p style="font-size:2rem" class="pt-2"> <%= pic.user.email.split('@').first %></p>
+  </div>
+  
+  <%= image_tag pic.main_image,class:"postImage"%>
+    <h2 class="text-center"><%= link_to pic.title, pic %></h2>
+</div>
+ <% end %>
